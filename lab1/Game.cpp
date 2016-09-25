@@ -96,7 +96,7 @@ void PrintStep(std::wofstream & _wofstream, int _step, int _countCardP1, int _co
 	_wofstream << _step << "\t" << _countCardP1 << "/" << _countCardP2 << "\t";
 	_wofstream << _cardP1 << "\t";
 	_wofstream << _cardP2 << "\t";
-	_wofstream << ((isFirstCardBigger(_cardP1, _cardP2)) ? "1 take" : "2 take");
+	_wofstream << (!isCardPowerSame(_cardP1, _cardP2)? ((isFirstCardBigger(_cardP1, _cardP2)) ? "1 take" : "2 take") :"nobody") ;
 	_wofstream << "\n";
 }
 
